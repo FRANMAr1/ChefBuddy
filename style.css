@@ -1,0 +1,205 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f0f4fa; /* Fondo pastel claro */
+}
+
+.container {
+    width: 100%;
+    max-width: 400px; /* Tamaño similar a un celular promedio */
+    background-color: #ffffff;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+}
+
+.header h1 {
+    color: #5a5e99; /* Azul violeta */
+}
+
+.menu-icon {
+    font-size: 24px;
+    cursor: pointer;
+    color: #7a81b4; /* Violeta pastel */
+}
+
+.search-bar {
+    display: flex;
+    padding: 10px;
+    gap: 5px;
+}
+
+.search-bar input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccd5f4;
+    border-radius: 5px;
+    background-color: #eef2fc;
+}
+
+.search-bar button {
+    background-color: #b3b8f1; /* Azul pastel suave */
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #ffffff;
+}
+
+.explore-flavors, .trending-recipes, .recipe-collections {
+    margin-top: 20px;
+}
+
+h2 {
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #7a81b4;
+}
+
+.special-recipe {
+    display: flex;
+    align-items: center;
+    background-color: #d7dff9; /* Azul claro */
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.special-recipe img {
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+}
+
+.recipe-info {
+    flex: 1;
+    margin-left: 10px;
+}
+
+.play-button {
+    background: none;
+    border: none;
+    font-size: 18px;
+    color: #5a5e99; /* Azul violeta oscuro */
+    cursor: pointer;
+}
+
+.trending-recipes .recipe-list {
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+}
+
+.recipe-card {
+    flex: 0 0 120px;
+    background-color: #e6ebfc; /* Azul pastel suave */
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+}
+
+.recipe-card img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.recipe-collections .collection-tags {
+    display: flex;
+    gap: 5px;
+    margin-bottom: 10px;
+    overflow-x: auto;
+}
+
+.collection-tags button {
+    background-color: #c2caf7; /* Violeta pastel claro */
+    border: none;
+    padding: 5px 10px;
+    border-radius: 20px;
+    cursor: pointer;
+    color: #ffffff;
+}
+
+.collection-tags .active {
+    background-color: #7a81b4; /* Violeta pastel intenso */
+    color: #ffffff;
+}
+
+.collection-list {
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+}
+
+.collection-card {
+    flex: 0 0 100px;
+    text-align: center;
+}
+
+.collection-card img {
+    width: 100%;
+    border-radius: 10px;
+    background-color: #d7dff9;
+}
+
+.collection-card p {
+    color: #5a5e99;
+}
+
+.footer-nav {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    max-width: 400px;
+    padding: 10px 0;
+    background-color: #ffffff;
+    position: fixed;
+    bottom: 0;
+    border-top: 1px solid #ccd5f4;
+}
+
+.footer-nav button {
+    background: none;
+    border: none;
+    font-size: 18px;
+    color: #5a5e99;
+    cursor: pointer;
+}
+
+/* Responsive Design */
+@media (min-width: 500px) {
+    /* Conserva el tamaño de la tarjeta, sin reducir en pantallas grandes */
+    .recipe-card {
+        flex: 0 0 120px;
+    }
+    .collection-card {
+        flex: 0 0 100px;
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        max-width: 400px; /* Mantiene el tamaño similar a un celular promedio */
+    }
+
+    .search-bar input, .search-bar button {
+        padding: 10px;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+}
